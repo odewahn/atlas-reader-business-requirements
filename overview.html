@@ -9,11 +9,25 @@
 <p><span style="line-height: 1.5em;">To write a new BRD for a feature, create a new file named after the feature (e.g. better-analytics.html), and copy/paste the contents of COPYME.html into your new document (yes, we need file templates). &nbsp;B</span><span style="line-height: 1.5em;">efore every product council meeting, the council leader will look through the parking lot for new BRD's, and we will discuss the priority of these features. Instead of going through the entire parking lot every time, we will only discuss features with new BRD's, and how they relate to the existing prioritized features.</span></p>
 </div>
 
-<p>The following figure illustrates the key systems that make up the reader project. &nbsp;</p>
+<p>The key elements in the system are:</p>
+
+<ul>
+	<li>The Central Content Store (CCS). &nbsp;A central storage spot for content that will be served by the Atlas Reader or Full Content Search.</li>
+	<li>Atlas Web Publisher. &nbsp;An API/UI for loading Atlas HTML Builds or EPUBs into the CCS. &nbsp;The Web Publisher will also provide a light metadata service.</li>
+	<li>Atlas Reader. &nbsp;The gateway app that serves content from the CSC. &nbsp;There are two main paths: whitelisted and gated. &nbsp;Whitelisted paths expose content to search indexes, like Google or the internal full content search project. &nbsp;Gated access serves content to users based on their permissions in the ProductCustomer Service.&nbsp;</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>The following figure illustrates how they relate to one another at a high level: &nbsp;</p>
 
 <p>&nbsp;</p>
 
 <figure><img alt="Alt Text" class="idocsatlas-reader-brd-overviewpng" src="docs/atlas-reader-brd-overview.png" />
 <figcaption>Key elements that make up the Atlas Reader project.</figcaption>
 </figure>
+
+<p>&nbsp;</p>
 </section>
+
+<p>&nbsp;</p>
