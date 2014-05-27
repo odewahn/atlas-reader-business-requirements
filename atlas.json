@@ -3,7 +3,8 @@
   "files": [
     "overview.html",
     "centralized-content-store.html",
-    "atlas-web-publisher.html"
+    "atlas-web-publisher.html",
+    "atlas-reader.html"
   ],
   "formats": {
     "pdf": {
