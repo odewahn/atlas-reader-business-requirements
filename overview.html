@@ -12,12 +12,10 @@
 <p>The key elements in the system are:</p>
 
 <ul>
-	<li>The Central Content Store (CCS). &nbsp;A central storage spot for content that will be served by the Atlas Reader or Full Content Search.</li>
+	<li>The Central Content Store (CCS). &nbsp;A central storage spot for content (HTMLBook or EPUB) that will be served by the Atlas Reader or Full Content Search.&nbsp;</li>
 	<li>Atlas Web Publisher. &nbsp;An API/UI for loading Atlas HTML Builds or EPUBs into the CCS. &nbsp;The Web Publisher will also provide a light metadata service.</li>
-	<li>Atlas Reader. &nbsp;The gateway app that serves content from the CSC. &nbsp;There are two main paths: whitelisted and gated. &nbsp;Whitelisted paths expose content to search indexes, like Google or the internal full content search project. &nbsp;Gated access serves content to users based on their permissions in the ProductCustomer Service.&nbsp;</li>
+	<li>Atlas Reader. &nbsp;The gateway app that serves content from the CCS. &nbsp;There are two main paths: whitelisted and gated. &nbsp;Whitelisted paths expose content to search indexes, like Google or the internal full content search project. &nbsp;Gated access serves content to users based on their permissions in the <a href="https://intranet.oreilly.com/confluence/display/IS/Ownership+Service+Documentation#OwnershipServiceDocumentation-RetrieveOwnershipAssociationsBetweenCustomersandProducts">Ownership Service</a>. &nbsp;The reader can display either HTMLBook (HTML5) or EPUB.</li>
 </ul>
-
-<p>&nbsp;</p>
 
 <p>The following figure illustrates how they relate to one another at a high level: &nbsp;</p>
 
