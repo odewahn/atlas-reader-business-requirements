@@ -39,27 +39,31 @@
 <section data-type="sect1">
 <h1>Feature Description</h1>
 
-<p>Central Content Storage will provide a destination repository for all transformed content that will be through the Atlas Reader, indexed by Full Content Search, or other content distribution related initiatives. &nbsp;In addition to raw storage, the CCS will provide a unified API for dealing with content that is keyed to other metadata systems within O'Reilly.</p>
+<p>Central Content Storage will provide a destination repository for all transformed content that will be through the Atlas Reader, indexed by Full Content Search, or other content distribution related initiatives. &nbsp;In addition to raw storage, the CCS will provide a unified API for dealing with content that is keyed to other metadata systems within O'Reilly. &nbsp;</p>
 
 <p>&nbsp;</p>
 
-<p>Key requirements:</p>
+<p><span style="line-height: 1.5em;">Key requirements include:</span></p>
 
 <ul>
 	<li>Storage support for Atlas HTML builds and EPUB. &nbsp;</li>
+	<li>Ability to &quot;attach&quot; the storage to instances running various client apps, like the Reader. &nbsp;</li>
 	<li>A JSON API for adding Atlas HTML Builds or EPUB content.</li>
-	<li>A JSON API for adding metadata about the content</li>
+	<li>A JSON API for adding minimal metadata about the content; we assume that richer metadata will be provided by the oreilly product service</li>
 	<li>
 	<ul>
 		<li>A product ID that ties the content to the oreilly product database</li>
 		<li>Basic upload info (username, date, etc)</li>
 	</ul>
 	</li>
-	<li>Ability to &quot;attach&quot; to instances running various client apps, like the Reader. &nbsp;These system will be expected to handle their own caching and other solutions</li>
-	<li>&nbsp;</li>
 </ul>
 
-<p>&nbsp;</p>
+<p>Non-Requirements (for the time being) include:</p>
+
+<ul>
+	<li>Sophisticated ACL. &nbsp;The initial implementation will not include groups, users, organizations, or teams. &nbsp;It is assumed that client apps will mount the CCS as a volume and handle ACL at the application level. &nbsp;</li>
+	<li>Caching. &nbsp;Cahcing and other performance related system will be handled at the application layer</li>
+</ul>
 
 <p>&nbsp;</p>
 
