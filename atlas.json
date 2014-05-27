@@ -1,4 +1,30 @@
 {
-  "files": ["01-brd.html"],
-  "theme": "oreillymedia/oreilly_brd_theme"
+  "branch": "master",
+  "files": [
+    "overview.html",
+    "centralized-content-store.html",
+    "atlas-web-publisher.html"
+  ],
+  "formats": {
+    "pdf": {
+      "version": false,
+      "index": false,
+      "toc": false
+    },
+    "epub": {
+      "index": false,
+      "toc": false,
+      "epubcheck": false
+    },
+    "mobi": {
+      "index": false,
+      "toc": false
+    },
+    "html": {
+      "index": false,
+      "toc": false
+    }
+  },
+  "theme": "oreillymedia/oreilly_brd_theme",
+  "title": "atlas reader business requirements"
 }
