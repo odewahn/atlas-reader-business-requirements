@@ -1,6 +1,6 @@
 jQuery(document).ready(function(){
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      window.disqus_shortname = 'oreillymediabiocodertest'; // required: replace example with your forum shortname
+      window.disqus_shortname = 'oreillyreaderbrd'; // required: replace example with your forum shortname
       window.disqus_title = $('title').text() + " / " + $('h1').first().text();
       window.disqus_id = $('title').text() + " / " + $('section').first().attr('id');
 
