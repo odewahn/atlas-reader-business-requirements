@@ -87,6 +87,10 @@ body {
     padding: 5px;
 }
 
+figure img {
+	width: 90%;
+	padding: 20px;
+}
 
 #slideout {
     position: fixed;
