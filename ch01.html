@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>atlas reader business requirements</title>
+
+    <!-- Bootstrap core CSS -->
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"/>
+   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+   <script type="text/javascript" src="theme/html/javascripts/disqus.js"> </script>
+
+   <link rel="stylesheet" href="theme/html/stylesheets/atlas.css"/>
+
+
+  </head>
+
+  <body data-type="book">
+
+    <div class="navbar navbar-fixed-top" role="navigation">	
+      <div class="container">
+        <div class="navbar-header">	
+	  <img class="logo" src="theme/html/assets/logo-white.svg"/>
+          <a class="title" href="#">atlas reader business requirements</a>
+        </div>
+
+	<div id="slideout">
+	    <span class="toc-control fa fa-bars"/>
+	    <div id="slideout_inner">
+		 <div class="input-group">
+	            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term"/>
+	            <div class="input-group-btn">
+	               <button class="btn btn-default search-button" type="submit"><span class="fa fa-search"/></button>
+	            </div>
+	         </div>   
+	        <h2>Contents</h2>
+	        <nav data-type="toc" id="idp85472"/>
+	    </div>
+	</div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <section data-type="chapter" data-pdf-bookmark="Chapter 1. Overview" id="idp396768">
+<h1>Overview</h1>
+
+<p>This document contains the business requirements documents (BRDs) for the “Atlas Reader” project.  The goal of the document is to provide a central point for collecting and discussing features for the reader and the related initiatives, such as full content search .  It is also meant to be used as a focal point for the “Atlas Reader Product Council,” whose members will be made up of various stakeholders.  The council will have monthly meetings to discuss new BRDs and the general status of the project.</p>
+
+<div data-type="note">
+<h1>Submitting a BRD</h1>
+
+<p><span style="line-height: 1.5em;">To write a new BRD for a feature, create a new file named after the feature (e.g. better-analytics.html), and copy/paste the contents of COPYME.html into your new document (yes, we need file templates).  B</span><span style="line-height: 1.5em;">efore every product council meeting, the council leader will look through the parking lot for new BRD’s, and we will discuss the priority of these features. Instead of going through the entire parking lot every time, we will only discuss features with new BRD’s, and how they relate to the existing prioritized features.</span></p>
+</div>
+
+<p>The key elements in the system are:</p>
+
+<ul>
+	<li>The Central Content Store (CCS).  A central storage spot for content (HTMLBook or EPUB) that will be served by the Atlas Reader or Full Content Search. </li>
+	<li>Atlas Web Publisher.  An API/UI for loading Atlas HTML Builds or EPUBs into the CCS.  The Web Publisher will also provide a light metadata service.</li>
+	<li>Atlas Reader.  The gateway app that serves content from the CCS.  There are two main paths: whitelisted and gated.  Whitelisted paths expose content to search indexes, like Google or the internal full content search project.  Gated access serves content to users based on their permissions in the <a href="https://intranet.oreilly.com/confluence/display/IS/Ownership+Service+Documentation#OwnershipServiceDocumentation-RetrieveOwnershipAssociationsBetweenCustomersandProducts">Ownership Service</a>.  The reader can display either HTMLBook (HTML5) or EPUB.</li>
+</ul>
+
+<p>The following figure illustrates how they relate to one another at a high level:  </p>
+
+<p> </p>
+
+<figure><img alt="Alt Text" class="idocsatlas-reader-brd-overviewpng" src="docs/atlas-reader-brd-overview.png"/>
+<figcaption>Key elements that make up the Atlas Reader project.</figcaption>
+</figure>
+
+<p>The following sections detail the BRDs for the key components we need to develop.</p>
+</section>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container">
+	<div class="row">
+	  <div class="pagination">
+	      <ul>
+	        <li class="prev"><span class="fa fa-chevron-left"/> </li>
+	        <li class="next"><a href="ch02.html">Next</a> <span class="fa fa-chevron-right"/></li>
+	      </ul>
+	  </div>       
+	</div>
+    </div>
+
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12 disqus">
+	     <div id="disqus_thread"/>
+	   </div>
+       </div>
+    </div>
+ 
+    <div class="footer">
+      <footer>
+        <p>© O'Reilly Media, 2014</p>
+      </footer>
+    </div>
+
+  </body>
+
+</html>

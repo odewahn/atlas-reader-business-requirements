@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>atlas reader business requirements</title>
+
+    <!-- Bootstrap core CSS -->
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"/>
+   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+   <script type="text/javascript" src="theme/html/javascripts/disqus.js"> </script>
+
+   <link rel="stylesheet" href="theme/html/stylesheets/atlas.css"/>
+
+
+  </head>
+
+  <body data-type="book">
+
+    <div class="navbar navbar-fixed-top" role="navigation">	
+      <div class="container">
+        <div class="navbar-header">	
+	  <img class="logo" src="theme/html/assets/logo-white.svg"/>
+          <a class="title" href="#">atlas reader business requirements</a>
+        </div>
+
+	<div id="slideout">
+	    <span class="toc-control fa fa-bars"/>
+	    <div id="slideout_inner">
+		 <div class="input-group">
+	            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term"/>
+	            <div class="input-group-btn">
+	               <button class="btn btn-default search-button" type="submit"><span class="fa fa-search"/></button>
+	            </div>
+	         </div>   
+	        <h2>Contents</h2>
+	        <nav data-type="toc" id="idp85472"/>
+	    </div>
+	</div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <section data-type="chapter" data-pdf-bookmark="Chapter 4. BRD: Atlas Reader" id="idp576672">
+<h1 id="main_heading">BRD: <em>Atlas Reader</em></h1>
+
+<p>Revision History</p>
+
+<table class="rev_history">
+	<thead>
+		<tr>
+			<th>Author/Compiler</th>
+			<th>Description</th>
+			<th>Date</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><em>Andrew Odewahn</em></td>
+			<td><em>Initial description of the Atlas reader app.  This document will undoubtedly break into many more BRDs as we identify the code functionality we must support.</em></td>
+			<td><em>5/27/2014</em></td>
+		</tr>
+		<tr>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+		</tr>
+		<tr>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+		</tr>
+	</tbody>
+</table>
+
+<section data-type="sect1" data-pdf-bookmark="Business Sponsor and Organization" id="idp588288">
+<h1>Business Sponsor and Organization</h1>
+
+<p><em>Andrew Odewahn</em></p>
+</section>
+
+<section data-type="sect1" data-pdf-bookmark="Feature Description" id="idp590128">
+<h1>Feature Description</h1>
+
+<p>The Atlas Reader provides a client gateway into the content in the CCS.  Key requirements are:</p>
+
+<ul>
+	<li>Ability to render themed HTML builds generated in Atlas</li>
+	<li>Ability to render EPUB (via a tool like epub.js) [explore if the <a class="link" href="http://blog.workhere.io/googlebots-recent-improvements-might-revolutionize-web-development/">new changes in the googlebot</a> make this a feasible delivery format]</li>
+	<li>Ability to browse these with beautiful splash pages</li>
+	<li><span style="line-height: 1.5em;">Whitelisting for searchbots, like Google or the full content search project to index all of the content in the reader </span></li>
+	<li>Ability to show preview for users coming from Google or other social media channels.  </li>
+	<li>Ensure compliance with Google’s <a class="link " href="http://googlewebmastercentral.blogspot.com/2009/12/changes-in-first-click-free.html">first click free </a>program.</li>
+	<li><span style="line-height: 1.5em;">Ability to log in with Janrain</span></li>
+	<li>Ability to allow/disallow access based on O’Reilly <a href="https://intranet.oreilly.com/confluence/display/IS/Ownership+Service+Documentation#OwnershipServiceDocumentation-RetrieveOwnershipAssociationsBetweenCustomersandProducts">ownership service</a> API</li>
+	<li>Ability to generate a “mega index page” that lists canonical links to all content in the CCS.  This should be accessible to the search crawlers.  (Note that these can be paged, with “next” and “prev” links that the crawlers will follow.)</li>
+	<li>Appropriate caching for performance</li>
+</ul>
+
+<p>Non Requirements include:</p>
+
+<ul>
+	<li>PDF rendering.  PDF will be extremely challenging to render, so we will not natively display PDF in the reader.  Instead, we will convert PDF to HTMLBook.  The reader will still be able to get the original PDF, but the reader will aid in discovery and findability.</li>
+	<li>Paragraph-level annotations.  Data indicates that the paragraph level commenting in Chimera was not worth the time and effort spent developing them.  Instead, we will seek alternative discussion frameworks, either through Disqus or other annotation plug-ins. </li>
+	<li>Uniform styling for EPUB.  Because we cannot control the source markup provided by distribution clients, we cannot develop uniform stylesheets against their markup.  Consequently, our best option is to render content in the style they provide.  </li>
+</ul>
+</section>
+
+<section data-type="sect1" data-pdf-bookmark="Success Criteria" id="idp605792">
+<h1>Success Criteria</h1>
+
+<ul>
+	<li>Increased content sales and discovery</li>
+	<li>Enable paid distribution of new content types and forms created in Atlas reader, particularly video and<a class="link " href="http://odewahn.github.io/grossman-test/ch02.html#arrays"> live code</a>.</li>
+	<li>Enabling user facing previews for content search project</li>
+	<li>Enable “members only” content that is accessible to customers who have enrolled in oreilly “members only” products [TBD] </li>
+	<li>Increase inbound referrals and conversion rates from social media (Twitter, etc) that can take advantage of new “preview” functionality</li>
+</ul>
+</section>
+
+<section data-type="sect1" data-pdf-bookmark="Maximum Level of Development Effort" id="idp608240">
+<h1>Maximum Level of Development Effort</h1>
+
+<p>XLarge.  We’ll need to break this BRD down into many smaller feature requirements.</p>
+</section>
+
+<section data-type="sect1" data-pdf-bookmark="Areas of Impact" id="idp609952">
+<h1>Areas of Impact</h1>
+
+<p>Please X all areas of functionality that will need to be changed to incorporate this feature:</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td class="checkbox"> </td>
+			<td>Visual Editor</td>
+			<td class="checkbox"> </td>
+			<td>Code Editor</td>
+		</tr>
+		<tr>
+			<td class="checkbox"> </td>
+			<td>Atlas API</td>
+			<td class="checkbox"> </td>
+			<td>Atlas Workers</td>
+		</tr>
+		<tr>
+			<td class="checkbox">x</td>
+			<td>Atlas Reader</td>
+			<td class="checkbox">x</td>
+			<td>CSS Themes</td>
+		</tr>
+		<tr>
+			<td class="checkbox"> </td>
+			<td>HTMLBook XSL</td>
+			<td class="checkbox"> </td>
+			<td>Markdown/AsciiDoc parsers</td>
+		</tr>
+		<tr>
+			<td class="checkbox"> </td>
+			<td>GitLab</td>
+			<td class="checkbox"> </td>
+			<td><em>ENTER YOUR OWN HERE</em></td>
+		</tr>
+	</tbody>
+</table>
+</section>
+</section>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container">
+	<div class="row">
+	  <div class="pagination">
+	      <ul>
+	        <li class="prev"><span class="fa fa-chevron-left"/> <a href="ch03.html">Previous</a></li>
+	        <li class="next"><a href="ch05.html">Next</a> <span class="fa fa-chevron-right"/></li>
+	      </ul>
+	  </div>       
+	</div>
+    </div>
+
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12 disqus">
+	     <div id="disqus_thread"/>
+	   </div>
+       </div>
+    </div>
+ 
+    <div class="footer">
+      <footer>
+        <p>© O'Reilly Media, 2014</p>
+      </footer>
+    </div>
+
+  </body>
+
+</html>
