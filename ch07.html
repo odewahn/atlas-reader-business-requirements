@@ -161,8 +161,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <section data-type="chapter" data-pdf-bookmark="Chapter 5. BRD: Content Loader" id="idp805504">
-<h1 id="main_heading">BRD: <em>Content Loader</em></h1>
+          <section data-type="chapter" data-pdf-bookmark="Chapter 7. BRD: Content Guardian" id="idp888960">
+<h1 id="main_heading">BRD: <em>Content Guardian</em></h1>
 
 <p>Revision History</p>
 
@@ -177,7 +177,7 @@
 	<tbody>
 		<tr>
 			<td><em>Andrew Odewahn</em></td>
-			<td><i>Initial description for the Atlas Web Publisher, the system that puts content into the CCS.</i></td>
+			<td><em>Initial description of the “content guardian” which controls access to the content in the SOLR server based on a variety of criteria.</em></td>
 			<td><em>5/27/2014</em></td>
 		</tr>
 		<tr>
@@ -193,55 +193,46 @@
 	</tbody>
 </table>
 
-<section data-type="sect1" data-pdf-bookmark="Business Sponsor and Organization" id="idp816784">
+<section data-type="sect1" data-pdf-bookmark="Business Sponsor and Organization" id="idp900592">
 <h1>Business Sponsor and Organization</h1>
 
 <p><em>Andrew Odewahn</em></p>
 </section>
 
-<section data-type="sect1" data-pdf-bookmark="Feature Description" id="idp818656">
+<section data-type="sect1" data-pdf-bookmark="Feature Description" id="idp902384">
 <h1>Feature Description</h1>
 
-<p>The Atlas Web Publisher provides a frontend UI and an API to put content into content storage.  Its key features should include:</p>
+<p>The Atlas Reader provides a client gateway into the content in the CCS.  Key requirements are:</p>
 
 <ul>
-	<li>A JSON API for adding Atlas HTML Builds or EPUB content.</li>
-	<li>A JSON API for adding minimal metadata about the content; we assume that richer metadata will be provided by the oreilly product service</li>
-	<li>
-	<ul>
-		<li>A product ID that ties the content to the oreilly product database</li>
-		<li>Basic upload info (username, date, etc)</li>
-		<li>A JSON flexfield that can contain arbitrary metadata</li>
-		<li>Metadata that is relevant to search but is otherwise not present in the Product Database</li>
-	</ul>
-	</li>
-	<li>Basic auth over HTTPS for the API </li>
-	<li>A UI that provides a layer on top of the API to allow users to manage CCS content in a familiar GUI</li>
+	<li>Implement ACL logic and rules to handle previews, paid access, group access, and other business logic.</li>
+	<li><span style="line-height: 1.5em;">Whitelisting for searchbots, like Google or the full content search project to index all of the content in the reader </span></li>
+	<li>Ability to show preview for users coming from Google or other social media channels.  </li>
+	<li>Ensure compliance with Google’s <a class="link " href="http://googlewebmastercentral.blogspot.com/2009/12/changes-in-first-click-free.html">first click free </a>program.</li>
+	<li><span style="line-height: 1.5em;">Ability to log in with Janrain</span></li>
+	<li>Ability to allow/disallow access based on O’Reilly <a href="https://intranet.oreilly.com/confluence/display/IS/Ownership+Service+Documentation#OwnershipServiceDocumentation-RetrieveOwnershipAssociationsBetweenCustomersandProducts">ownership service</a> API</li>
+	<li>Ability to generate a “mega index page” that lists canonical links to all content in the CCS.  This should be accessible to the search crawlers.  (Note that these can be paged, with “next” and “prev” links that the crawlers will follow.)</li>
 </ul>
 
-<p>Non requirements for the initial release:</p>
-
-<ul>
-	<li>For Atlas projects, deployment of the “themes” onto a CDN or some other asset pipeline</li>
-</ul>
+<p>Non Requirements include:</p>
 </section>
 
-<section data-type="sect1" data-pdf-bookmark="Success Criteria" id="idp818912">
+<section data-type="sect1" data-pdf-bookmark="Success Criteria" id="idp911120">
 <h1>Success Criteria</h1>
 
 <ul>
-	<li>Delivery by Summer of 2014 [???]</li>
+	<li>Enable Google to crawl out our content and return results in Google searches securely</li>
 	<li> </li>
 </ul>
 </section>
 
-<section data-type="sect1" data-pdf-bookmark="Maximum Level of Development Effort" id="idp830288">
+<section data-type="sect1" data-pdf-bookmark="Maximum Level of Development Effort" id="idp913040">
 <h1>Maximum Level of Development Effort</h1>
 
-<p>This is an XLarge project.</p>
+<p>XLarge.  We’ll need to break this BRD down into many smaller feature requirements.</p>
 </section>
 
-<section data-type="sect1" data-pdf-bookmark="Areas of Impact" id="idp831568">
+<section data-type="sect1" data-pdf-bookmark="Areas of Impact" id="idp914000">
 <h1>Areas of Impact</h1>
 
 <p>Please X all areas of functionality that will need to be changed to incorporate this feature:</p>
@@ -255,14 +246,14 @@
 			<td>Code Editor</td>
 		</tr>
 		<tr>
-			<td class="checkbox">x</td>
-			<td><strong>Atlas API</strong></td>
+			<td class="checkbox"> </td>
+			<td>Atlas API</td>
 			<td class="checkbox"> </td>
 			<td>Atlas Workers</td>
 		</tr>
 		<tr>
 			<td class="checkbox">x</td>
-			<td><strong>Atlas Reader</strong></td>
+			<td>Atlas Reader</td>
 			<td class="checkbox"> </td>
 			<td>CSS Themes</td>
 		</tr>
@@ -290,8 +281,8 @@
 	<div class="row">
 	  <div class="pagination">
 	      <ul>
-	        <li class="prev"><span class="fa fa-chevron-left"/> <a href="ch04.html">Previous</a></li>
-	        <li class="next"><a href="ch06.html">Next</a> <span class="fa fa-chevron-right"/></li>
+	        <li class="prev"><span class="fa fa-chevron-left"/> <a href="ch06.html">Previous</a></li>
+	        <li class="next"><a href="ch08.html">Next</a> <span class="fa fa-chevron-right"/></li>
 	      </ul>
 	  </div>       
 	</div>

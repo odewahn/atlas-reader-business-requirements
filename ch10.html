@@ -161,8 +161,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <section data-type="chapter" data-pdf-bookmark="Chapter 5. BRD: Content Loader" id="idp805504">
-<h1 id="main_heading">BRD: <em>Content Loader</em></h1>
+          <section data-type="chapter" data-pdf-bookmark="Chapter 10. BRD: Atlas Reader" id="idp1015840">
+<h1 id="main_heading">BRD: <em>Atlas Reader</em></h1>
 
 <p>Revision History</p>
 
@@ -177,7 +177,7 @@
 	<tbody>
 		<tr>
 			<td><em>Andrew Odewahn</em></td>
-			<td><i>Initial description for the Atlas Web Publisher, the system that puts content into the CCS.</i></td>
+			<td><em>Initial description of the Atlas reader app.  This document will undoubtedly break into many more BRDs as we identify the code functionality we must support.</em></td>
 			<td><em>5/27/2014</em></td>
 		</tr>
 		<tr>
@@ -193,55 +193,55 @@
 	</tbody>
 </table>
 
-<section data-type="sect1" data-pdf-bookmark="Business Sponsor and Organization" id="idp816784">
+<section data-type="sect1" data-pdf-bookmark="Business Sponsor and Organization" id="idp1027024">
 <h1>Business Sponsor and Organization</h1>
 
 <p><em>Andrew Odewahn</em></p>
 </section>
 
-<section data-type="sect1" data-pdf-bookmark="Feature Description" id="idp818656">
+<section data-type="sect1" data-pdf-bookmark="Feature Description" id="idp1028896">
 <h1>Feature Description</h1>
 
-<p>The Atlas Web Publisher provides a frontend UI and an API to put content into content storage.  Its key features should include:</p>
+<p>The Atlas Reader provides a client gateway into the content in the CCS.  Key requirements are:</p>
 
 <ul>
-	<li>A JSON API for adding Atlas HTML Builds or EPUB content.</li>
-	<li>A JSON API for adding minimal metadata about the content; we assume that richer metadata will be provided by the oreilly product service</li>
-	<li>
-	<ul>
-		<li>A product ID that ties the content to the oreilly product database</li>
-		<li>Basic upload info (username, date, etc)</li>
-		<li>A JSON flexfield that can contain arbitrary metadata</li>
-		<li>Metadata that is relevant to search but is otherwise not present in the Product Database</li>
-	</ul>
-	</li>
-	<li>Basic auth over HTTPS for the API </li>
-	<li>A UI that provides a layer on top of the API to allow users to manage CCS content in a familiar GUI</li>
+	<li>Ability to render themed HTML builds generated in Atlas</li>
+	<li>Ability to render EPUB (via a tool like epub.js) [explore if the <a class="link" href="http://blog.workhere.io/googlebots-recent-improvements-might-revolutionize-web-development/">new changes in the googlebot</a> make this a feasible delivery format]</li>
+	<li>Ability to browse these with beautiful splash pages</li>
+	<li class="p2">Implement a 1 click buy option</li>
+	<li class="p2">Provide a beautiful “preview” display option</li>
+	<li><span style="line-height: 1.5em;">Appropriate caching for performance</span></li>
 </ul>
 
-<p>Non requirements for the initial release:</p>
+<p>Non Requirements include:</p>
 
 <ul>
-	<li>For Atlas projects, deployment of the “themes” onto a CDN or some other asset pipeline</li>
+	<li>PDF rendering.  PDF will be extremely challenging to render, so we will not natively display PDF in the reader.  Instead, we will convert PDF to HTMLBook.  The reader will still be able to get the original PDF, but the reader will aid in discovery and findability.</li>
+	<li>Paragraph-level annotations.  Data indicates that the paragraph level commenting in Chimera was not worth the time and effort spent developing them.  Instead, we will seek alternative discussion frameworks, either through Disqus or other annotation plug-ins. </li>
+	<li>Uniform styling for EPUB.  Because we cannot control the source markup provided by distribution clients, we cannot develop uniform stylesheets against their markup.  Consequently, our best option is to render content in the style they provide.  </li>
 </ul>
 </section>
 
-<section data-type="sect1" data-pdf-bookmark="Success Criteria" id="idp818912">
+<section data-type="sect1" data-pdf-bookmark="Success Criteria" id="idp1039856">
 <h1>Success Criteria</h1>
 
 <ul>
-	<li>Delivery by Summer of 2014 [???]</li>
-	<li> </li>
+	<li>Increased content sales and discovery</li>
+	<li>Enable paid distribution of new content types and forms created in Atlas reader, particularly video and<a class="link " href="http://odewahn.github.io/grossman-test/ch02.html#arrays"> live code</a>.</li>
+	<li>Enabling user facing previews for content search project</li>
+	<li>Enable “members only” content that is accessible to customers who have enrolled in oreilly “members only” products [TBD] </li>
+	<li>Increase inbound referrals and conversion rates from social media (Twitter, etc) that can take advantage of new “preview” functionality</li>
+	<li>Enable 2-3 paid “enhanced content projects” by the end of the year.  (An enhanced project is one that includes elements that are beyond a traditional book, such as videos, live code, assessments, or other elements.)</li>
 </ul>
 </section>
 
-<section data-type="sect1" data-pdf-bookmark="Maximum Level of Development Effort" id="idp830288">
+<section data-type="sect1" data-pdf-bookmark="Maximum Level of Development Effort" id="idp1038176">
 <h1>Maximum Level of Development Effort</h1>
 
-<p>This is an XLarge project.</p>
+<p>XLarge.  We’ll need to break this BRD down into many smaller feature requirements.</p>
 </section>
 
-<section data-type="sect1" data-pdf-bookmark="Areas of Impact" id="idp831568">
+<section data-type="sect1" data-pdf-bookmark="Areas of Impact" id="idp1046624">
 <h1>Areas of Impact</h1>
 
 <p>Please X all areas of functionality that will need to be changed to incorporate this feature:</p>
@@ -255,15 +255,15 @@
 			<td>Code Editor</td>
 		</tr>
 		<tr>
-			<td class="checkbox">x</td>
-			<td><strong>Atlas API</strong></td>
+			<td class="checkbox"> </td>
+			<td>Atlas API</td>
 			<td class="checkbox"> </td>
 			<td>Atlas Workers</td>
 		</tr>
 		<tr>
 			<td class="checkbox">x</td>
-			<td><strong>Atlas Reader</strong></td>
-			<td class="checkbox"> </td>
+			<td>Atlas Reader</td>
+			<td class="checkbox">x</td>
 			<td>CSS Themes</td>
 		</tr>
 		<tr>
@@ -290,8 +290,8 @@
 	<div class="row">
 	  <div class="pagination">
 	      <ul>
-	        <li class="prev"><span class="fa fa-chevron-left"/> <a href="ch04.html">Previous</a></li>
-	        <li class="next"><a href="ch06.html">Next</a> <span class="fa fa-chevron-right"/></li>
+	        <li class="prev"><span class="fa fa-chevron-left"/> <a href="ch09.html">Previous</a></li>
+	        <li class="next"> <span class="fa fa-chevron-right"/></li>
 	      </ul>
 	  </div>       
 	</div>

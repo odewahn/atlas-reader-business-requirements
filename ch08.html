@@ -161,8 +161,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <section data-type="chapter" data-pdf-bookmark="Chapter 5. BRD: Content Loader" id="idp805504">
-<h1 id="main_heading">BRD: <em>Content Loader</em></h1>
+          <section data-type="chapter" data-pdf-bookmark="Chapter 8. BRD: Minimal Reader" id="idp932496">
+<h1 id="main_heading">BRD: <em>Minimal Reader</em></h1>
 
 <p>Revision History</p>
 
@@ -177,8 +177,8 @@
 	<tbody>
 		<tr>
 			<td><em>Andrew Odewahn</em></td>
-			<td><i>Initial description for the Atlas Web Publisher, the system that puts content into the CCS.</i></td>
-			<td><em>5/27/2014</em></td>
+			<td><em>Goal is to provide a minimal readers that can go live by august</em></td>
+			<td><em>DATE HERE</em></td>
 		</tr>
 		<tr>
 			<td> </td>
@@ -193,55 +193,42 @@
 	</tbody>
 </table>
 
-<section data-type="sect1" data-pdf-bookmark="Business Sponsor and Organization" id="idp816784">
+<section data-type="sect1" data-pdf-bookmark="Business Sponsor and Organization" id="idp944272">
 <h1>Business Sponsor and Organization</h1>
 
 <p><em>Andrew Odewahn</em></p>
 </section>
 
-<section data-type="sect1" data-pdf-bookmark="Feature Description" id="idp818656">
+<section data-type="sect1" data-pdf-bookmark="Feature Description" id="idp946096">
 <h1>Feature Description</h1>
 
-<p>The Atlas Web Publisher provides a frontend UI and an API to put content into content storage.  Its key features should include:</p>
+<p>This is a minimal version of the reader needed to deliver results from SOLR for full content search.  It’s possible that this will be merged with the full atlas reader if timing allows.</p>
 
 <ul>
-	<li>A JSON API for adding Atlas HTML Builds or EPUB content.</li>
-	<li>A JSON API for adding minimal metadata about the content; we assume that richer metadata will be provided by the oreilly product service</li>
-	<li>
-	<ul>
-		<li>A product ID that ties the content to the oreilly product database</li>
-		<li>Basic upload info (username, date, etc)</li>
-		<li>A JSON flexfield that can contain arbitrary metadata</li>
-		<li>Metadata that is relevant to search but is otherwise not present in the Product Database</li>
-	</ul>
-	</li>
-	<li>Basic auth over HTTPS for the API </li>
-	<li>A UI that provides a layer on top of the API to allow users to manage CCS content in a familiar GUI</li>
-</ul>
-
-<p>Non requirements for the initial release:</p>
-
-<ul>
-	<li>For Atlas projects, deployment of the “themes” onto a CDN or some other asset pipeline</li>
+	<li>Implement content guardian</li>
+	<li>Previews</li>
+	<li>1-click buy</li>
 </ul>
 </section>
 
-<section data-type="sect1" data-pdf-bookmark="Success Criteria" id="idp818912">
+<section data-type="sect1" data-pdf-bookmark="Success Criteria" id="idp949424">
 <h1>Success Criteria</h1>
 
 <ul>
-	<li>Delivery by Summer of 2014 [???]</li>
-	<li> </li>
+	<li>Serve EPUB and Atlas HTML by August</li>
+	<li>Enable a measurable boost in online sales and discovery via 1-click buy</li>
 </ul>
 </section>
 
-<section data-type="sect1" data-pdf-bookmark="Maximum Level of Development Effort" id="idp830288">
+<section data-type="sect1" data-pdf-bookmark="Maximum Level of Development Effort" id="idp951696">
 <h1>Maximum Level of Development Effort</h1>
 
-<p>This is an XLarge project.</p>
+<p><em>ENTER A BRIEF PHRASE ON DEVELOPMENT RESOURCES NEEDED</em></p>
+
+<p><em>e.g., Small (a few hours) Med (a few days) Large (up to two weeks) XLarge (more than two weeks)</em></p>
 </section>
 
-<section data-type="sect1" data-pdf-bookmark="Areas of Impact" id="idp831568">
+<section data-type="sect1" data-pdf-bookmark="Areas of Impact" id="idp954320">
 <h1>Areas of Impact</h1>
 
 <p>Please X all areas of functionality that will need to be changed to incorporate this feature:</p>
@@ -255,15 +242,15 @@
 			<td>Code Editor</td>
 		</tr>
 		<tr>
-			<td class="checkbox">x</td>
-			<td><strong>Atlas API</strong></td>
+			<td class="checkbox"> </td>
+			<td>Atlas API</td>
 			<td class="checkbox"> </td>
 			<td>Atlas Workers</td>
 		</tr>
 		<tr>
 			<td class="checkbox">x</td>
-			<td><strong>Atlas Reader</strong></td>
-			<td class="checkbox"> </td>
+			<td>Atlas Reader</td>
+			<td class="checkbox">x</td>
 			<td>CSS Themes</td>
 		</tr>
 		<tr>
@@ -290,8 +277,8 @@
 	<div class="row">
 	  <div class="pagination">
 	      <ul>
-	        <li class="prev"><span class="fa fa-chevron-left"/> <a href="ch04.html">Previous</a></li>
-	        <li class="next"><a href="ch06.html">Next</a> <span class="fa fa-chevron-right"/></li>
+	        <li class="prev"><span class="fa fa-chevron-left"/> <a href="ch07.html">Previous</a></li>
+	        <li class="next"><a href="ch09.html">Next</a> <span class="fa fa-chevron-right"/></li>
 	      </ul>
 	  </div>       
 	</div>
